@@ -17,10 +17,10 @@ library(curlconverter)
 library(tidyverse)
 
 headers = c(
-  Authorization = "Bearer 7ad861fbebd8dd8b64a9f52d96eec299c05b62c2",
+  Authorization = "Bearer ",
   `Content-Type` = "application/json"
 )
-res <- httr::GET(url = "https://us-central1-pooli-19f1c.cloudfunctions.net/api/v1/users/GCoCclscCKRx6I2GFFAWbBWt6XB2/pools/aDMCVEQvlqfjbQ9ITjiR/logs", httr::add_headers(.headers=headers))
+res <- httr::GET(url = "https://us-central1-pooli-19f1c.cloudfunctions.net/api/v1//pools//logs", httr::add_headers(.headers=headers))
 
 data = fromJSON(rawToChar(res$content))
 names(data)
